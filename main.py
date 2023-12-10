@@ -35,8 +35,8 @@ class MyClient(discord.Client):
           if self.user!= message.author:
               if self.user in message.mentions:
                 response = openai.Completion.create(
-                  model="text-davinci-003",
-                  prompt = f"{chat}\nHarryGPT: ",
+                  model="gpt-3.5-turbo-instruct-0914",
+                  prompt = f"{chat}\nDCGPT: ",
                   temperature=1,
                   max_tokens=256,
                   top_p=1,
